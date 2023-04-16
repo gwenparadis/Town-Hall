@@ -38,14 +38,6 @@ router.post('/:postId/react', withAuth, async (req, res) => {
         id: postId,
       },
     });
-    console.log('New Reaction', getPostById);
-    // const newReaction = getPostById.reaction
-    // const postEdit = getPostById.set({
-    //   reaction: newReaction,
-    // });
-
-    // await postEdit.save();
-
     res.status(200).json(getPostById);
   } catch (error) {
     res.status(400).json(error);

@@ -59,7 +59,6 @@ router.get('/posts', async (req, res) => {
           where: {
             id: req.session.user_id,
           },
-          // attributes: ['firstName'],
         },
       ],
     });
